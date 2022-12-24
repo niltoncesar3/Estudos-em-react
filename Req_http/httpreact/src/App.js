@@ -1,25 +1,34 @@
 import {useState, useEffect} from "react"
 
+//components
+import NewButton from "./components/NewButton"
+
+
+//url
 const url = "http://localhost:3000/products"
+
+
 
 function App() {
 
-  //1-> Resgatando dados
-
   const [products, setProducts] = useState([])
 
-  useEffect(() => {
-    async function fecthData() {
-      const res = await fetch(url);
-      const data = await res.json();
+  //1-> Resgatando dados
+
+  useEffect (() => {
+    async function fetchData() {
+      const res = await fetch(url)
+      const data = await res.json()
 
       setProducts(data)
     }
 
-    fecthData();
-  },[])
-
+    fetchData();
+  },[10])
+ 
   console.log(products)
+
+ 
   
   // 2 -> Adição de produtos
 
@@ -27,6 +36,12 @@ function App() {
   return (
     <div>
       <h1>Oi</h1>
+      <NewButton/>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>{product.name} - {product.price}</li>
+        ))}
+      </ul>
 
     </div>
   );
