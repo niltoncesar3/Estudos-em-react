@@ -3,32 +3,30 @@ import {useState, useEffect} from "react"
 //components
 import NewButton from "./components/NewButton"
 
-
-//url
 const url = "http://localhost:3000/products"
 
-
-
 function App() {
+  const [products, setProducts] = useState([]);
 
-  const [products, setProducts] = useState([])
-
-  //1-> Resgatando dados
-
-  useEffect (() => {
+  useEffect(() => {
     async function fetchData() {
       const res = await fetch(url)
-      const data = await res.json()
+      const data = await res.json();
 
       setProducts(data)
     }
 
-    fetchData();
-  },[10])
- 
-  console.log(products)
+    fetchData(products)
+  },[])
 
- 
+  console.log(products)
+  
+
+  
+
+  //1-> Resgatando dados
+
+  
   
   // 2 -> Adição de produtos
 
@@ -39,9 +37,10 @@ function App() {
       <NewButton/>
       <ul>
         {products.map((product) => (
-          <li key={product.id}>{product.name} - {product.price}</li>
+          <li key={product.id}>{product.name} - R$ {product.price}</li>
         ))}
       </ul>
+      
 
     </div>
   );
