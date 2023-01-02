@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
 
 //components
-import NewButton from "./components/NewButton"
+import NewButton from "./components/NewButton";
 
 const url = "http://localhost:3000/products"
 
@@ -34,13 +34,13 @@ function App() {
   return (
     <div>
       <h1>Oi</h1>
-      <NewButton/>
+      
       <ul>
         {products.map((product) => (
           <li key={product.id}>{product.name} - R$ {product.price}</li>
         ))}
       </ul>
-      
+      <NewButton/>
 
     </div>
   );
