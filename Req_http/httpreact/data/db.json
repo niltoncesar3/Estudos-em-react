@@ -1,19 +1,69 @@
 {
-  "products" : [
+  "products": [
     {
-      "id" : 1,
-      "name" : "Camisa",
-      "price" : 59.9
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
     },
     {
-      "id" : 2,
-      "name" : "Calça vermelha",
-      "price" : 90
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
     },
     {
-      "id" : 3,
-      "name" : "Boné aba reta",
-      "price" : 30.9
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 30.9
+    },
+    {
+      "name": "teste",
+      "price": "123",
+      "id": 4
+    },
+    {
+      "name": "teste",
+      "price": "123",
+      "id": 5
+    },
+    {
+      "name": "guarda chuva",
+      "price": "321",
+      "id": 6
+    },
+    {
+      "name": "bone",
+      "price": "987",
+      "id": 7
+    },
+    {
+      "name": "cadeira",
+      "price": "200",
+      "id": 8
+    },
+    {
+      "name": "bone",
+      "price": "99898778978",
+      "id": 9
+    },
+    {
+      "name": "teste",
+      "price": "321",
+      "id": 10
+    },
+    {
+      "name": "teste",
+      "price": "321",
+      "id": 11
+    },
+    {
+      "name": "tenis",
+      "price": "123",
+      "id": 12
+    },
+    {
+      "name": "terbnis",
+      "price": "213412",
+      "id": 13
     }
   ]
 }
