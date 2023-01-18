@@ -6,6 +6,7 @@ const url = "http://localhost:3000/products"
 function App() {
 
   const [products, setProducts] = useState([])
+  
 
   useEffect(() => {
     async function fetchData() {
@@ -28,10 +29,7 @@ function App() {
           <li key={product.id}>{product.name} {product.price}</li>
         ))}
       </ul>
-    
-     
             
-      
 
     </div>
   );
