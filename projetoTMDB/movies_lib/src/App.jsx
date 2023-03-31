@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 
 
 import './App.css'
+import NewButton from './components/NewButton'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div>
       <NavBar/>
       <Outlet/>
+      <NewButton/>
     </div>
   )
 }
